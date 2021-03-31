@@ -5,7 +5,7 @@ const verifyToken = (req,res,next) => {
     const token = header.split(" ")[1]
     if(!token) throw new Error ("invalid token")
     const payload = (jwt.verify(token,"inirahasia"))
-
+    req.payload = payload
     next()
 }
 
