@@ -10,7 +10,7 @@ const verifyToken = require('./middleware/authorization')
 
 const localPort =PORT || 3000
 console.log('running on',localPort)
-app.use(cors())
+app.use(cors)
 app.use(express.json())
 
 app.get("/", (req,res)=> {
