@@ -17,10 +17,11 @@ app.get("/", (req,res)=> {
     res.send("halo")
 })
 
+app.use(authRouter)
 app.use(studentRouter)
 app.use(bookRouter)
 app.use(verifyToken, bookLoanRouter)
-app.use(authRouter)
+
 
 
 
